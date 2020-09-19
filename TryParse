@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SandBox
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int parsedNumber;
+
+            Console.WriteLine("Give me a number");
+            string number = Console.ReadLine();
+
+            bool isNumber = int.TryParse(number, out parsedNumber);
+
+            while (isNumber == false)
+            {
+                Console.WriteLine("Please enter a numeric value.");
+                number = Console.ReadLine();
+                isNumber = int.TryParse(number, out parsedNumber);
+            }
+
+            Console.WriteLine($"{parsedNumber} is a number indeed!");
+
+            Console.ReadLine();
+
+
+        }
+
+
+
+
+    }
+}
