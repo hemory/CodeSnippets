@@ -25,6 +25,25 @@ namespace SandBox
             }
 
             Console.WriteLine($"{parsedNumber} is a number indeed!");
+            
+            
+            
+            
+            
+               //more efficient way to write this
+            int parsedNumber;
+            
+            Console.WriteLine("Give me a number");
+            string number = Console.ReadLine();
+            
+            
+            while (!int.TryParse(number, out parsedNumber))
+            {
+                Console.WriteLine("Please enter a numeric value.");
+                number = Console.ReadLine();
+            }
+            
+            Console.WriteLine($"{parsedNumber} is a number indeed!");
 
             Console.ReadLine();
 
